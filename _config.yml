@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
+title: 越狱的陈奕迅
+subtitle: '每只草莓熊都是独一无二的，你永远是我最爱的草莓熊。'
 description: ''
 keywords:
-author: John Doe
+author: Ayang
 language: en
 timezone: ''
 
@@ -97,6 +97,7 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: landscape
+
 
 # Deployment
 ## Docs: https://github.com/easonccc/easonccc.github.io.git
