@@ -6,15 +6,15 @@
   
   <title>Google登陆 | 越狱的陈奕迅</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Google 在 vue3 中的登陆Template12345&lt;GoogleLogin  clientId&#x3D;&quot;项目的clientId&quot;  :callback&#x3D;&quot;callback&quot;  class&#x3D;&quot;gooleLogin&quot;&#x2F;&gt;  JS 部分 先初始化  123456789101112131415161718192021222324">
+  <meta name="description" content="Google 在 vue3 中的登陆Template12345&lt;GoogleLogin  clientId&#x3D;&quot;项目的clientId&quot;  :callback&#x3D;&quot;callback&quot;  class&#x3D;&quot;gooleLogin&quot;&#x2F;&gt;  JS 部分1. 安装123&quot;vue3-google-login&quot;: &quot;^">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Google登陆">
 <meta property="og:url" content="http://example.com/2024/12/13/work/Google%E7%99%BB%E9%99%86/index.html">
 <meta property="og:site_name" content="越狱的陈奕迅">
-<meta property="og:description" content="Google 在 vue3 中的登陆Template12345&lt;GoogleLogin  clientId&#x3D;&quot;项目的clientId&quot;  :callback&#x3D;&quot;callback&quot;  class&#x3D;&quot;gooleLogin&quot;&#x2F;&gt;  JS 部分 先初始化  123456789101112131415161718192021222324">
+<meta property="og:description" content="Google 在 vue3 中的登陆Template12345&lt;GoogleLogin  clientId&#x3D;&quot;项目的clientId&quot;  :callback&#x3D;&quot;callback&quot;  class&#x3D;&quot;gooleLogin&quot;&#x2F;&gt;  JS 部分1. 安装123&quot;vue3-google-login&quot;: &quot;^">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-12-13T02:55:04.698Z">
-<meta property="article:modified_time" content="2024-12-13T02:56:33.798Z">
+<meta property="article:modified_time" content="2024-12-13T03:05:48.107Z">
 <meta property="article:author" content="Ayang">
 <meta property="article:tag" content="vue">
 <meta property="article:tag" content="登录">
@@ -107,20 +107,18 @@
       
         <h3 id="Google-在-vue3-中的登陆"><a href="#Google-在-vue3-中的登陆" class="headerlink" title="Google 在 vue3 中的登陆"></a>Google 在 vue3 中的登陆</h3><h4 id="Template"><a href="#Template" class="headerlink" title="Template"></a>Template</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">GoogleLogin</span></span></span><br><span class="line"><span class="tag">  <span class="attr">clientId</span>=<span class="string">&quot;项目的clientId&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">:callback</span>=<span class="string">&quot;callback&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">class</span>=<span class="string">&quot;gooleLogin&quot;</span></span></span><br><span class="line"><span class="tag">/&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="JS-部分"><a href="#JS-部分" class="headerlink" title="JS 部分"></a>JS 部分</h4><ol>
-<li>先初始化</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">loadFBSDK</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  ;(<span class="keyword">function</span> (<span class="params">d, s, id</span>) &#123;</span><br><span class="line">    <span class="comment">// Load the SDK asynchronously</span></span><br><span class="line">    <span class="keyword">var</span> js</span><br><span class="line">    <span class="keyword">var</span> fjs = d.<span class="title function_">getElementsByTagName</span>(s)[<span class="number">0</span>]</span><br><span class="line">    <span class="keyword">if</span> (d.<span class="title function_">getElementById</span>(id)) <span class="keyword">return</span></span><br><span class="line">    js = d.<span class="title function_">createElement</span>(s)</span><br><span class="line"></span><br><span class="line">    js.<span class="property">src</span> = <span class="string">&quot;https://connect.facebook.net/en_US/sdk.js&quot;</span></span><br><span class="line">    fjs.<span class="property">parentNode</span>.<span class="title function_">insertBefore</span>(js, fjs)</span><br><span class="line">  &#125;)(<span class="variable language_">document</span>, <span class="string">&quot;script&quot;</span>, <span class="string">&quot;facebook-jssdk&quot;</span>)</span><br><span class="line"></span><br><span class="line">  <span class="variable language_">window</span>.<span class="property">fbAsyncInit</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable constant_">FB</span>.<span class="title function_">init</span>(&#123;</span><br><span class="line">      <span class="attr">appId</span>: <span class="string">&quot;填入项目的appId&quot;</span>,</span><br><span class="line">      <span class="attr">xfbml</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">version</span>: <span class="string">&quot;v20.0&quot;</span>,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">onMounted</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="title function_">loadFBSDK</span>()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="JS-部分"><a href="#JS-部分" class="headerlink" title="JS 部分"></a>JS 部分</h4><h5 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;vue3-google-login&quot;: &quot;^2.0.25&quot;</span><br><span class="line"></span><br><span class="line">npm i vue3-google-login</span><br></pre></td></tr></table></figure>
 
-<ol start="2">
-<li>点击登录时调用 onFBLogin</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">onFBLogin</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="variable constant_">FB</span>.<span class="title function_">login</span>(<span class="keyword">function</span> (<span class="params">response</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (response.<span class="property">authResponse</span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(response, <span class="string">&quot;response&quot;</span>)</span><br><span class="line">      <span class="title function_">handleLogin</span>(response.<span class="property">authResponse</span>.<span class="property">accessToken</span>) <span class="comment">// 调用后端接口登录</span></span><br><span class="line"></span><br><span class="line">      <span class="variable constant_">FB</span>.<span class="title function_">api</span>(<span class="string">&quot;/me&quot;</span>, <span class="keyword">function</span> (<span class="params">response</span>) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Good to see you, &quot;</span> + response.<span class="property">name</span> + <span class="string">&quot;.&quot;</span>)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">error</span>(response)</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;User cancelled login or did not fully authorize.&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="2-引入"><a href="#2-引入" class="headerlink" title="2. 引入"></a>2. 引入</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; decodeCredential, <span class="title class_">GoogleLogin</span> &#125; <span class="keyword">from</span> <span class="string">&quot;vue3-google-login&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="3-点击登录时调用-会回调-callback"><a href="#3-点击登录时调用-会回调-callback" class="headerlink" title="3. 点击登录时调用 会回调 callback"></a>3. 点击登录时调用 会回调 callback</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">callback</span> = (<span class="params">response</span>) =&gt; &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Handle the response&quot;</span>, response)</span><br><span class="line"></span><br><span class="line">  <span class="title function_">handleLogin</span>(response.<span class="property">credential</span>) <span class="comment">//调用后端接口</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> userData = <span class="title function_">decodeCredential</span>(response.<span class="property">credential</span>) <span class="comment">// 解析用户信息</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(userData, <span class="string">&quot;userData&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="如果要改-css-样式-直接去改-iframe-里的元素-例如："><a href="#如果要改-css-样式-直接去改-iframe-里的元素-例如：" class="headerlink" title="如果要改 css 样式 直接去改 iframe 里的元素 例如："></a>如果要改 css 样式 直接去改 iframe 里的元素 例如：</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;style lang=&quot;less&quot;&gt;</span><br><span class="line"><span class="selector-class">.nsm7Bb-HzV7m-LgbsSe</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">338px</span>;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/12/13/work/Google%E7%99%BB%E9%99%86/" data-id="cm4m5risf0004f10ca1ebhvlk" data-title="Google登陆" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/12/13/work/Google%E7%99%BB%E9%99%86/" data-id="cm4m7ps9700004j0c396s9gt1" data-title="Google登陆" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -131,6 +129,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2024/12/13/work/%E5%8F%91%E9%80%81%E7%9F%AD%E4%BF%A1%E5%80%92%E8%AE%A1%E6%97%B660s/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          发送短信倒计时60s
+        
+      </div>
+    </a>
   
   
     <a href="/2024/12/13/work/Facebook%E7%99%BB%E9%99%86/" id="article-nav-older" class="article-nav-link-wrap">
@@ -162,7 +169,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/" rel="tag">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/" rel="tag">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/" rel="tag">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%94%B6%E8%97%8F/" rel="tag">收藏</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%99%BB%E5%BD%95/" rel="tag">登录</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%85%8D%E7%BD%AE/" rel="tag">配置</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/" rel="tag">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/" rel="tag">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/" rel="tag">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B8%B8%E7%94%A8%E7%9A%84%E6%96%B9%E6%B3%95/" rel="tag">常用的方法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%94%B6%E8%97%8F/" rel="tag">收藏</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%99%BB%E5%BD%95/" rel="tag">登录</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%85%8D%E7%BD%AE/" rel="tag">配置</a></li></ul>
     </div>
   </div>
 
@@ -172,7 +179,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/mac/" style="font-size: 20px;">mac</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/vue/" style="font-size: 20px;">vue</a> <a href="/tags/%E6%94%B6%E8%97%8F/" style="font-size: 10px;">收藏</a> <a href="/tags/%E7%99%BB%E5%BD%95/" style="font-size: 20px;">登录</a> <a href="/tags/%E9%85%8D%E7%BD%AE/" style="font-size: 20px;">配置</a>
+      <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/mac/" style="font-size: 15px;">mac</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/vue/" style="font-size: 20px;">vue</a> <a href="/tags/%E5%B8%B8%E7%94%A8%E7%9A%84%E6%96%B9%E6%B3%95/" style="font-size: 10px;">常用的方法</a> <a href="/tags/%E6%94%B6%E8%97%8F/" style="font-size: 10px;">收藏</a> <a href="/tags/%E7%99%BB%E5%BD%95/" style="font-size: 15px;">登录</a> <a href="/tags/%E9%85%8D%E7%BD%AE/" style="font-size: 15px;">配置</a>
     </div>
   </div>
 
@@ -194,6 +201,10 @@
       <ul>
         
           <li>
+            <a href="/2024/12/13/work/%E5%8F%91%E9%80%81%E7%9F%AD%E4%BF%A1%E5%80%92%E8%AE%A1%E6%97%B660s/">发送短信倒计时60s</a>
+          </li>
+        
+          <li>
             <a href="/2024/12/13/work/Google%E7%99%BB%E9%99%86/">Google登陆</a>
           </li>
         
@@ -207,10 +218,6 @@
         
           <li>
             <a href="/2024/12/12/life/%E6%8A%BD%E8%B1%A1%E6%96%87%E6%A1%88/">抽象文案们</a>
-          </li>
-        
-          <li>
-            <a href="/2024/12/12/work/%E9%85%8D%E7%BD%AE%E4%B8%A4%E4%B8%AAGitHub%E8%B4%A6%E5%8F%B7/">同一台电脑上配置两个 GitHub 账号</a>
           </li>
         
       </ul>
