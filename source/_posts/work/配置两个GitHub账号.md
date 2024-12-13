@@ -104,4 +104,4 @@ git config user.email
 ```
 push 的话还是照常使用：git push origin master
 
-···转自Acan博客[https://github.com/hzsss/Mac-OS下配置多个GitHub账号/]
+···转自Acan博客[[ https://github.com/hzsss/Mac-OS下配置多个GitHub账号/]](https://hzsss.github.io/Mac-OS%E4%B8%8B%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAGitHub%E8%B4%A6%E5%8F%B7/)
