@@ -12,4 +12,7 @@
 ### 更新源码到github 分支： template
 
 
-### 更新网站 分支：main
+### 更新网站 分支：main   
+```bash
+    hexo deploy
+```
